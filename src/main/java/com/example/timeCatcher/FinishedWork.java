@@ -7,7 +7,7 @@ public class FinishedWork {
     Date date;
     String location;
     String comment;
-    String lalala;
+    String BOBOBO;
 
 
 

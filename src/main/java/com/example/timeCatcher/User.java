@@ -11,11 +11,8 @@ import org.springframework.data.annotation.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 
-
-
-
 public class User {
-    @org.springframework.data.annotation.Id // @Id ?
+    @Id// @Id ?
     Integer Id;
     String name;
 }

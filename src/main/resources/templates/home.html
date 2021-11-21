@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 75%;
+}
+
+.right {
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Time Catcher</title>
+</head>
+
+<body>
+
+<div>
+    <h1>
+        Hello. Insert your working hours here:
+    </h1>
+</div>
+
+<div>
+    Date <input type="date" id="date" name="date">
+    Start time <input type="time" id="startTime" name="startTime" placeholder="Start time">
+    Finish time <input type="time" id="finishTime" name="finishTime">
+    <input type="text" id="location" name="location" placeholder="Where?">
+    <input text="text" id="workDescription" name="workDescription" placeholder="What did you do?">
+    <input type="submit">
+</div>
+
+<br/><br/>
+<div class="row">
+    <div class="column left">
+        <h2>Table of employees' working hours</h2>
+        <p>Table will be here.
+        Added the calculated time for each input.</p>
+    </div>
+
+    <div class="column right">
+        <h2>Calculated working hours</h2>
+        <p>????</p>
+    </div>
+</div>
+
+<div>
+
+</div>
+
+
+
+</body>
+</html>

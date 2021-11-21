@@ -8,7 +8,4 @@ public class FinishedWork {
     String location;
     String comment;
     String BOBOBO;
-
-
-
 }

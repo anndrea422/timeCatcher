@@ -8,12 +8,14 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "user")
 
 public class User {
 
@@ -21,5 +23,4 @@ public class User {
 
     Integer Id;
     String name;
-    String email;
 }

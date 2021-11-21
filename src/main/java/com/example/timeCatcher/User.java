@@ -15,11 +15,10 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Entity
 
-
-
-
 public class User {
+
     @Id @GeneratedValue
+
     Integer Id;
     String name;
 }

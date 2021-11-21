@@ -21,4 +21,5 @@ public class User {
 
     Integer Id;
     String name;
+    String email;
 }

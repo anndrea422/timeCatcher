@@ -1,14 +1,9 @@
 package com.example.timeCatcher;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 
@@ -31,7 +26,7 @@ public class HomeController {
             @RequestParam(name = "startTime", required = false) Date startTime,
             @RequestParam(name = "finishTime", required = false) Date finishTime,
             @RequestParam(name = "textWhere", required = false) String textWhere,
-            @RequestParam(name = "textDescription", required = false) String textDescription,
+            @RequestParam(name = "textDescription", required = false) String textDescription, BindingResult bindingResult,
             Model model
     ){
         model.addAttribute("startTime", startTime);
@@ -46,6 +41,8 @@ public class HomeController {
     ){
         return "companyHome";
     }
+
+
 }
 
 

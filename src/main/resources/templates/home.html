@@ -41,11 +41,11 @@
 </div>
 
 <div>
-    <form th:action="@{sampleInputs}" th:object="${sampleInputs}" method="post" enctype="utf8">
-        <input type="datetime-local" th:field="*{sampleInputs.startTime}" placeholder="Start time">
-        <input type="datetime-local" th:field="*{sampleInputs.finishTime}" placeholder="Finish time">
-        <input type="text" th:field="*{sampleInputs.textWhere}" placeholder="Where?">
-        <input type="text" th:field="*{sampleInputs.textDescription}" placeholder="What did you do?">
+    <form th:action="@{/home}" method="post" enctype="utf8">
+        <input type="datetime-local" th:field="*{startTime}" placeholder="Start time">
+        <input type="datetime-local" th:field="*{finishTime}" placeholder="Finish time">
+        <input type="text" th:field="*{textWhere}" placeholder="Where?">
+        <input type="text" th:field="*{textDescription}" placeholder="What did you do?">
         <input type="submit" value="Submit">
     </form>
 </div>

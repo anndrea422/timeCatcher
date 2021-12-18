@@ -15,16 +15,24 @@
 </head>
 <body>
 <header>
-    <h3> User View </h3>
+    <nav class="navbar navbar-light bg-light">
+        <div class="navbar-brand mb-0 h1">
+            <h1>User View</h1>
+        </div>
+    </nav>
 </header>
 <div>
-    <div>
+    <div class="card bg-light mb-3" style="max-width:18rem;
+                        padding-top: 10px;
+                          padding-right: 10px;
+                          padding-bottom: 10px;
+                          padding-left: 10px;">
         <div><span>Name: </span><span th:text="${user.getName()}"></span></div>
-        <div><span>userID: </span><span th:text="${user.getId()}"></span>
+        <div><span>User ID: </span><span th:text="${user.getId()}"></span>
 
             <div>
-                <a th:href="'/user/update/' + ${user.id}">update</a>
-                <a th:href="'/user/delete/' + ${user.id}">delete</a>
+                <a class="btn btn-warning ml-1" th:href="'/user/update/' + ${user.id}">update</a>
+                <a class="btn btn-danger ml-1" th:href="'/user/delete/' + ${user.id}">delete</a>
             </div>
         </div>
     </div>

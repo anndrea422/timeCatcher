@@ -21,6 +21,7 @@
 
     <form th:action="@{/add-working-hour-form}"  th:object="${newCompletedWork}" method="POST">
 
+        <input type="text" th:field="*{userId}" class="form-control col-4 mb-4" placeholder="Your ID? " />
         <input type="datetime-local" th:field="*{startTime}" class="form-control col-4 mb-4" placeholder="Start time" />
 
         <input type="datetime-local" th:field="*{finishTime}" class="form-control col-4 mb-4" placeholder="Finish time" />

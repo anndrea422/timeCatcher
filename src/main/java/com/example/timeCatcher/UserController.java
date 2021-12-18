@@ -50,7 +50,7 @@ public class UserController {
    @GetMapping("/{id}")
     public String insertedUser(@PathVariable @RequestParam(value = "id") Integer id, Model model) {
         model.addAttribute("id", userRepository.findById(id).orElseThrow(new UserNotFoundException()));
-        return "home";
+        return "list-completed-work";
 
     }
 

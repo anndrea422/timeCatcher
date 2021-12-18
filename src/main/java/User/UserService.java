@@ -1,4 +1,4 @@
-package com.example.timeCatcher;
+package User;
 
 import org.springframework.stereotype.Service;
 

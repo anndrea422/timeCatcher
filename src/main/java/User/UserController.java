@@ -1,12 +1,12 @@
-package com.example.timeCatcher;
+package User;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+        import org.springframework.stereotype.Controller;
+        import org.springframework.ui.Model;
+        import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
+        import java.util.ArrayList;
+        import java.util.List;
 
 @Controller
 public class UserController {
@@ -36,7 +36,7 @@ public class UserController {
 
     }
 
-    @GetMapping("/login2")
+    @GetMapping({"/login2"})
     public String showLogin(@PathVariable Integer id, Model model) {
         model.addAttribute("user", userRepository.findById(id).orElseThrow());
         return "login2";}

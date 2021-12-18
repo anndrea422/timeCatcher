@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update user</title>
+</head>
+<body>
+<h3> Update user </h3>
+</head>
+
+<form method="post" th:action="'/user/update/' + ${user.id}">
+    <input name="name" th:value="${user.getName()}" required placeholder="name"></br>
+    <button type="submit">Update user</button>
+</form>
+</body>
+</html>

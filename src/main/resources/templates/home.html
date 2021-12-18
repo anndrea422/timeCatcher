@@ -35,13 +35,13 @@
 <body>
 
 <div>
-    <h1>
-        Hello. Insert your working hours here:
-    </h1>
+
+        <h3>Hello <span th:text="${user.getName()}"></span>! Insert your working hours here:</h3>
+
 </div>
 
 <div>
-    <form action="/" method="get">
+    <form action="/" method="post">
         Date <input type="date" id="date" name="date">
         Start time <input type="time" id="startTime" name="startTime" placeholder="Start time">
         Finish time <input type="time" id="finishTime" name="finishTime">

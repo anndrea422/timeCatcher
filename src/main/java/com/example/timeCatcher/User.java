@@ -21,6 +21,6 @@ public class User {
 
     @Id @GeneratedValue
 
-    Integer Id;
+    Integer id;
     String name;
 }

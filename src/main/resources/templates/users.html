@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Users</title>
+
+</head>
+<body>
+<div>
+    <h1> All users:  <span th:text="${userList.size()}"></span></h1>
+</div>
+<div>
+    <form action="/users" method="get">
+        <label>Search: </label>
+        <input placeholder="Find User" name="search" th:value="${searchText}"/>
+        <select name="searchBy">
+            <option>name</option>
+            <option>id</option>
+        </select>
+            <button type="submit">search</button>
+    </form>
+</div>
+<div>
+    <ul>
+        <li th:each="user : ${userList}">
+            <div>
+                <div><span>Name: </span><span th:text="${user.getName()}"></span></div>
+                <div><span>userID: </span><span th:text="${user.getId()}"></span>
+
+                    <div>
+                        <a th:href="'/user/view/' + ${user.id}">view</a>
+                        <a th:href="'/user/update/' + ${user.id}">update</a>
+                        <a th:href="'/user/delete/' + ${user.id}">delete</a>
+                    </div>
+                </div>
+            </div>
+            </br>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

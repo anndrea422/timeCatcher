@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class completedWork {
+public class CompletedWork {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +25,7 @@ public class completedWork {
     private String finishTime;
     private String textWhere;
     private String textDescription;
+    private Integer userId;
 //    private String totalHours;
 }
 

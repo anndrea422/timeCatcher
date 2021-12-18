@@ -61,13 +61,13 @@ span.psw {
 </head>
 <body>
 
-<form action="/list" method="get">
+<form action="@{/list/{id}(id = ${id})}" method="get">
     <div class="imgcontainer">
         <img src="https://i.postimg.cc/QC0gHF7D/logo.png" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
-        <label for="id"><b>Please enter your user id</b></label>
+        <label><b>Please enter your user id</b></label>
         <input type="number" placeholder="Enter User ID" name="id" required>
 
 <!--        <label for="password"><b>Password</b></label>-->
@@ -76,7 +76,7 @@ span.psw {
         <button type="submit">Login</button>
 
         <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
+            <input type="checkbox" checked="checked"> Remember me
         </label>
     </div>
 

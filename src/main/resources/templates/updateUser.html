@@ -1,16 +1,37 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Update user</title>
+    <title>All Users</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/v/bs4/jq-3.6.0/dt-1.11.3/datatables.min.css"/>
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.css" />
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+          crossorigin="anonymous" />
 </head>
 <body>
-<h3> Update user </h3>
+<nav class="navbar navbar-light bg-light">
+    <div class="navbar-brand mb-0 h1">
+        <h1>Update User</h1>
+    </div>
+</nav>
 </head>
 
+<div class="card bg-light mb-3" style="max-width:18rem;
+padding-top: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
+padding-left: 10px;">
 <form method="post" th:action="'/user/update/' + ${user.id}">
-    <input name="name" th:value="${user.getName()}" required placeholder="name"></br>
+    <input name="name" th:value="${user.getName()}" required placeholder="Name"></br>
+    </br>
     <button type="submit">Update user</button>
 </form>
+</div>
 </body>
 </html>

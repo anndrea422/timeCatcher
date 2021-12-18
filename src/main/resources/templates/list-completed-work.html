@@ -42,7 +42,7 @@
 <!--            <td th:text="${completedWork.totalHours}"/>-->
 
             <td>
-                <a th:href="@{/showUpdateForm(completedWorkId=${completedWork.id})}" class="btn btn-info">Update</a>
+                <a th:href="@{/showUpdateForm(completedWorkId=${completedWork.id})}" class="btn btn-warning">Update</a>
                 <a th:href="@{/deleteWork(completedWorkId=${completedWork.id})}" class="btn btn-danger ml-2">Delete</a>
             </td>
         </tr>

@@ -18,7 +18,7 @@ public class TimeCatcherController {
     }
 
     @GetMapping("/list/{id}")
-    public ModelAndView getAllCompletedWork(@PathVariable("id") Integer id){
+    public ModelAndView getAllCompletedWork(@RequestParam Integer id){
         ModelAndView mav = new ModelAndView("list-completed-work");
         List<CompletedWork> userWorks = eRepo.findAllByUserId(id);
         mav.addObject("completedWork",userWorks);
@@ -36,7 +36,8 @@ public class TimeCatcherController {
     @PostMapping("/add-working-hour-form")
     public String saveNewWork(@ModelAttribute CompletedWork completedWork){
         eRepo.save(completedWork);
-        return "redirect:/list";
+        Integer cp = completedWork.getUserId();
+        return "redirect:/list/id?id="+cp.toString();
     }
 
     @GetMapping("/showUpdateForm")
@@ -47,9 +48,11 @@ public class TimeCatcherController {
         return mav;
     }
 
-    @GetMapping("/deleteWork")
-    public String deleteWork(@RequestParam Long completedWorkId) {
+    @DeleteMapping("/deleteWork")
+    public void deleteWork(@RequestParam Long completedWorkId) {
         eRepo.deleteById(completedWorkId);
-        return "redirect:/list";
+
+
+
     }
 }

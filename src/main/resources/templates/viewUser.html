@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+<header>
+    <h3> User View </h3>
+</header>
+<div>
+    <div>
+        <div><span>Name: </span><span th:text="${user.getName()}"></span></div>
+        <div><span>userID: </span><span th:text="${user.getId()}"></span>
+
+            <div>
+                <a th:href="'/user/update/' + ${user.id}">update</a>
+                <a th:href="'/user/delete/' + ${user.id}">delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

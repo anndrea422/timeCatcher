@@ -9,12 +9,12 @@ public class HomeController {
 
     @GetMapping("/")
     public String showLogin(
-            @RequestParam(name = "name", required = false) String name,
-            @RequestParam(name = "idCode", required = false) String idCode,
+            @RequestParam(name = "id", required = false) Integer id,
+           // @RequestParam(name = "idCode", required = false) String idCode,
             Model model
     ) {
-        model.addAttribute("name", name);
-        model.addAttribute("idCode", idCode);
+        model.addAttribute("id", id);
+       // model.addAttribute("idCode", idCode);
         return "login";
     }
 
@@ -40,6 +40,8 @@ public class HomeController {
     ){
         return "companyHome";
     }
+
+
 }
 
 

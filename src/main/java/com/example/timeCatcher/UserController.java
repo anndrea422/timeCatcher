@@ -1,4 +1,4 @@
-package User;
+package com.example.timeCatcher;
 
 import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.stereotype.Controller;
@@ -27,7 +27,6 @@ public class UserController {
     public String showRegistration() {
         return "register";
     }
-
 
     @PostMapping("/register")
     public String createUser(@ModelAttribute User user) {

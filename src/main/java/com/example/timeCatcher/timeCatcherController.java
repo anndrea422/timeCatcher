@@ -1,4 +1,6 @@
 package com.example.timeCatcher;
+import com.example.timeCatcher.completedWork;
+import com.example.timeCatcher.timeCatcherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package User;
+package com.example.timeCatcher;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

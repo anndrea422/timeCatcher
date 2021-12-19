@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class TimeCatcherController {
@@ -48,11 +49,14 @@ public class TimeCatcherController {
         return mav;
     }
 
-    @DeleteMapping("/deleteWork")
-    public void deleteWork(@RequestParam Long completedWorkId) {
-        eRepo.deleteById(completedWorkId);
-
-
-
+    @GetMapping("/deleteWork")
+    public String deleteWork(@RequestParam Long completedWorkId) {
+        Optional<CompletedWork> deletedWork = eRepo.findById(completedWorkId);
+        if (deletedWork.isPresent()) {
+            Integer userId = deletedWork.get().getUserId();
+            eRepo.deleteById(completedWorkId);
+            return "redirect:/list/id?id=" + userId.toString();
+        }
+        return "redirect:/add-working-hour-form";
     }
 }
